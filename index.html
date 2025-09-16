@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WP Design IA - Sua presença digital nunca mais será a mesma</title>
-    <meta name="description" content="Venda mais com IA: imagens, vídeos e avatares que convertem visitantes em clientes. Seus concorrentes já descobriram - e você?">
+    <title>WP Design IA - Transforme sua presença digital com IA</title>
+    <meta name="description" content="Transforme sua presença digital com IA: Te ajudo a VENDER QUALQUER COISA com o poder da inteligência artificial">
     <meta name="keywords" content="vendas com IA, marketing digital, imagens IA, avatares virtuais, vídeos publicitários">
     <style>
         * {
@@ -15,59 +15,13 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #0a0a0a;
-            color: #FFFFFF;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%);
+            color: #ffffff;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Animações */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes slideInUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(255, 0, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.3); }
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes particles {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-        }
-
-        /* Background com partículas */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(255, 0, 255, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
+        /* Partículas animadas no fundo */
         .particles {
             position: fixed;
             top: 0;
@@ -82,33 +36,107 @@
             position: absolute;
             width: 2px;
             height: 2px;
-            background: #ff00ff;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
             border-radius: 50%;
-            animation: particles 15s linear infinite;
+            animation: float 6s ease-in-out infinite;
         }
 
-        .particle:nth-child(2n) {
-            background: #00d4ff;
-            animation-duration: 20s;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
         }
 
-        .particle:nth-child(3n) {
-            background: #ff00ff;
-            animation-duration: 25s;
-        }
-
-        /* Alerta de Urgência */
-        .urgency-bar {
-            background: linear-gradient(90deg, #ff0066, #ff3399);
-            color: white;
-            text-align: center;
-            padding: 0.8rem;
-            font-weight: bold;
+        /* Header fixo */
+        .header {
             position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #00d4ff;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
             width: 100%;
-            z-index: 999;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Alert no topo */
+        .alert-bar {
+            background: linear-gradient(45deg, #ff00ff, #ff1493);
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            margin-top: 70px;
             animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
         /* Hero Section */
@@ -118,390 +146,605 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding: 100px 20px 50px;
             position: relative;
-            overflow: hidden;
-            padding-top: 60px;
         }
 
         .hero-content {
-            max-width: 900px;
-            padding: 0 2rem;
+            max-width: 800px;
             z-index: 2;
-            position: relative;
         }
 
         .hero h1 {
-            font-size: 3.8rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: slideInUp 1s ease, gradientShift 3s ease-in-out infinite;
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .hero-subtitle {
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5)); }
+        }
+
+        .hero p {
             font-size: 1.3rem;
-            color: #CCCCCC;
-            margin-bottom: 2rem;
-            animation: slideInUp 1s ease 0.1s both;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+
+        .hero-cta {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Hero Section Combinada */
+        .hero-combined {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 50px;
+            position: relative;
+        }
+
+        .hero-combined-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #cccccc;
         }
 
         .hero-video {
-            margin: 2rem 0;
-            animation: slideInUp 1s ease 0.3s both;
+            z-index: 2;
         }
 
-        .hero-video iframe {
+        .video-container {
+            max-width: 100%;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 0, 255, 0.3);
+        }
+
+        .video-container iframe {
             width: 100%;
-            max-width: 600px;
-            height: 315px;
-            border-radius: 15px;
-            border: 3px solid #ff00ff;
+            height: 350px;
+            border: none;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            padding: 1.5rem 3.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            color: white;
-            font-size: 1.3rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            animation: slideInUp 1s ease 0.4s both, glow 2s infinite 2s, gradientShift 3s ease-in-out infinite;
-            margin: 1rem;
-        }
+        /* Responsividade para Hero Combinada */
+        @media (max-width: 768px) {
+            .hero-combined-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(255, 0, 255, 0.3);
-        }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
 
-        /* Container padrão */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .video-container iframe {
+                height: 250px;
+            }
         }
 
         /* Seção de Benefícios */
-        .benefits {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(255, 0, 255, 0.05));
+        .benefits-section {
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        .benefits h2 {
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
+        }
+
+        .benefits-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
         }
 
         .benefits-subtitle {
-            text-align: center;
-            color: #CCCCCC;
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 60px;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
         }
 
         .benefit-card {
             background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 0, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             backdrop-filter: blur(10px);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .benefit-icon img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #00d4ff;
-        }
-
-        .benefit-card p {
-            color: #CCCCCC;
-            font-size: 1.1rem;
-        }
-
-        /* Seção de Promoção */
-        .promotion-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #ff0066, #ff3399);
+            border: 1px solid rgba(255, 0, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
             text-align: center;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .promotion-section h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 1rem;
-            z-index: 2;
-            position: relative;
-        }
-
-        .promotion-section p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            z-index: 2;
-            position: relative;
-        }
-
-        /* Seção de Serviços */
-        .services {
-            padding: 100px 0;
-            background: #0a0a0a;
-        }
-
-        .services h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
-        }
-
-        .services-subtitle {
-            text-align: center;
-            color: #CCCCCC;
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 25px;
-            padding: 2.5rem;
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .service-card::before {
+        .benefit-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 212, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 0, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2);
+        }
+
+        .benefit-image {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 0, 255, 0.3);
+        }
+
+        .benefit-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00d4ff;
+        }
+
+        .benefit-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Seção de Promoção Simplificada */
+        .promo-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 212, 255, 0.1));
+        }
+
+        .promo-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .promo-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .promo-subtitle {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .promo-button {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 15px 35px;
+            border: none;
             border-radius: 25px;
-            padding: 2px;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            z-index: -1;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.3);
+        }
+
+        .promo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Seção de Serviços */
+        .services-section {
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-subtitle {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(255, 0, 255, 0.2);
-        }
-
-        .service-header {
-            text-align: center;
-            margin-bottom: 2rem;
+            border-color: rgba(255, 0, 255, 0.5);
+            box-shadow: 0 15px 30px rgba(255, 0, 255, 0.2);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid rgba(255, 255, 255, 0.1);
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .service-icon img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
             color: #00d4ff;
         }
 
         .service-card p {
-            color: #CCCCCC;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
         }
 
-        .price-comparison {
-            background: rgba(255, 68, 68, 0.1);
-            border: 2px solid #ff4444;
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+        .price-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
         }
 
-        .price-comparison h4 {
-            color: #ff6b6b;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .price-list {
-            list-style: none;
-        }
-
-        .price-list li {
+        .price-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
-            color: #CCCCCC;
-        }
-
-        .price-list li:last-child {
-            border-bottom: none;
+            margin: 8px 0;
+            font-size: 0.9rem;
         }
 
         .price-old {
-            color: #888;
             text-decoration: line-through;
-            font-size: 0.9rem;
+            color: #888;
+            font-size: 0.8rem;
         }
 
         .price-new {
             color: #00d4ff;
             font-weight: bold;
-            font-size: 1.2rem;
         }
 
-        .service-cta {
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            padding: 1rem 2rem;
-            border-radius: 15px;
-            text-decoration: none;
-            color: white;
+        .service-button {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
             font-weight: bold;
-            text-align: center;
-            display: block;
+            text-decoration: none;
+            display: inline-block;
             transition: all 0.3s ease;
-            margin-top: 1.5rem;
-            animation: gradientShift 3s ease-in-out infinite;
+            font-size: 0.9rem;
         }
 
-        .service-cta:hover {
+        .service-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3);
         }
 
-        /* Seção Antes e Depois */
-        .before-after {
-            padding: 100px 0;
-            background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 212, 255, 0.05));
+        /* Planos Mensais */
+        .plans-section {
+            padding: 100px 20px;
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 212, 255, 0.1));
         }
 
-        .before-after h2 {
+        .plans-container {
+            max-width: 1000px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
+        }
+
+        .plans-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .plans-subtitle {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 60px;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .plan-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 0, 255, 0.3);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card.featured {
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255, 0, 255, 0.3);
+        }
+
+        .plan-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .plan-card h3 {
+            font-size: 1.8rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .plan-price {
+            margin-bottom: 30px;
+        }
+
+        .plan-price .price-old {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .plan-price .price-new {
+            color: #00d4ff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .plan-price .price-period {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+
+        .plan-features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            color: #cccccc;
+            margin: 12px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .plan-button {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
+            width: 100%;
+        }
+
+        .plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Carrossel de Prova Social */
+        .carousel-section {
+            padding: 60px 20px;
+            background: rgba(255, 0, 255, 0.05);
         }
 
         .carousel-container {
-            position: relative;
             max-width: 800px;
             margin: 0 auto;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .carousel-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .carousel-subtitle {
+            font-size: 1rem;
+            color: #cccccc;
+            margin-bottom: 30px;
         }
 
         .carousel {
-            display: flex;
-            transition: transform 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 0, 255, 0.3);
         }
 
-        .carousel-item {
-            min-width: 100%;
-            height: 450px;
-            background: rgba(255, 255, 255, 0.05);
+        .carousel-slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-indicators {
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: #CCCCCC;
-            font-size: 1.5rem;
-            border: 2px dashed rgba(255, 0, 255, 0.3);
-        }
-
-        .carousel-nav {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
             gap: 10px;
+            margin-top: 20px;
         }
 
-        .carousel-dot {
+        .indicator {
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -510,60 +753,67 @@
             transition: all 0.3s ease;
         }
 
-        .carousel-dot.active {
-            background: #00d4ff;
-            transform: scale(1.3);
+        .indicator.active {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
         }
 
-        /* Seção de Depoimentos */
-        .testimonials {
-            padding: 100px 0;
-            background: rgba(255, 0, 255, 0.05);
+        /* Depoimentos */
+        .testimonials-section {
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.2);
         }
 
-        .testimonials h2 {
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
+        }
+
+        .testimonials-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 30px;
         }
 
         .testimonial-card {
             background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.3);
             border-radius: 20px;
-            border-left: 4px solid #00d4ff;
-            transition: transform 0.3s ease;
+            padding: 30px;
+            text-align: left;
+            transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
         }
 
         .testimonial-header {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
         }
 
         .testimonial-avatar {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            margin-right: 1rem;
+            margin-right: 15px;
+            border: 2px solid rgba(0, 212, 255, 0.5);
             overflow: hidden;
-            border: 3px solid #00d4ff;
         }
 
         .testimonial-avatar img {
@@ -574,38 +824,30 @@
 
         .testimonial-info h4 {
             color: #00d4ff;
-            font-weight: bold;
-            margin-bottom: 0.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
 
-        .testimonial-stars {
-            color: #FFD700;
+        .testimonial-info p {
+            color: #888;
             font-size: 0.9rem;
         }
 
+        .stars {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
         .testimonial-text {
-            color: #CCCCCC;
-            font-style: italic;
-            font-size: 1.1rem;
+            color: #cccccc;
             line-height: 1.6;
+            font-style: italic;
         }
 
         /* FAQ */
-        .faq {
-            padding: 100px 0;
-            background: #0a0a0a;
-        }
-
-        .faq h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
+        .faq-section {
+            padding: 100px 20px;
+            background: rgba(255, 0, 255, 0.05);
         }
 
         .faq-container {
@@ -613,650 +855,835 @@
             margin: 0 auto;
         }
 
+        .faq-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .faq-item {
             background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 255, 0.2);
             border-radius: 15px;
+            margin-bottom: 15px;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .faq-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-
         .faq-question {
-            padding: 1.5rem;
-            background: rgba(255, 0, 255, 0.1);
-            color: #00d4ff;
-            font-weight: bold;
+            padding: 20px;
             cursor: pointer;
-            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
+        .faq-question:hover {
+            background: rgba(255, 0, 255, 0.1);
+        }
+
+        .faq-question h3 {
+            color: #00d4ff;
+            font-size: 1.1rem;
+        }
+
+        .faq-icon {
+            color: #ff00ff;
+            font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
 
-        .faq-item.active .faq-question::after {
+        .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
 
         .faq-answer {
-            padding: 0 1.5rem;
-            color: #CCCCCC;
-            line-height: 1.6;
+            padding: 0 20px;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .faq-item.active .faq-answer {
-            padding: 1.5rem;
+            padding: 20px;
             max-height: 200px;
         }
 
-        /* CTA Final */
-        .final-cta {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            text-align: center;
-            position: relative;
-            animation: gradientShift 5s ease-in-out infinite;
-        }
-
-        .final-cta h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            z-index: 2;
-            position: relative;
-        }
-
-        .final-cta p {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            z-index: 2;
-            position: relative;
-        }
-
-        .final-cta .cta-button {
-            background: white;
-            color: #ff00ff;
-            font-size: 1.4rem;
-            animation: pulse 2s infinite;
-            z-index: 2;
-            position: relative;
-        }
-
-        /* Footer Completo */
-        footer {
-            background: #0a0a0a;
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(255, 0, 255, 0.3);
-        }
-
-        .footer-main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h4 {
-            color: #00d4ff;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p, .footer-section li {
-            color: #CCCCCC;
-            margin-bottom: 0.5rem;
+        .faq-answer p {
+            color: #cccccc;
             line-height: 1.6;
         }
 
-        .footer-section ul {
-            list-style: none;
+        /* Seção Final CTA */
+        .final-cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        .footer-section ul li:before {
-            content: '✓ ';
-            color: #4AFF4A;
+        .final-cta-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-size: 2.2rem;
             font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+        .final-cta-text {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff00ff, #00d4ff);
-            background-size: 200% 200%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .final-cta-button {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
             text-decoration: none;
-            color: white;
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            animation: gradientShift 3s ease-in-out infinite;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.3);
         }
 
-        .social-links a:hover {
-            transform: scale(1.1);
+        .final-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Rodapé */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px 20px 20px;
+            border-top: 1px solid rgba(255, 0, 255, 0.2);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cccccc;
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #00d4ff;
         }
 
         .footer-bottom {
             text-align: center;
-            color: #CCCCCC;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 0, 255, 0.2);
-            padding-top: 2rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
         }
 
-        /* WhatsApp Flutuante */
+        /* Botão flutuante WhatsApp */
         .whatsapp-float {
             position: fixed;
+            bottom: 20px;
+            right: 20px;
             width: 60px;
             height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
+            background: linear-gradient(45deg, #25d366, #128c7e);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
             text-decoration: none;
-            z-index: 999;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
         }
 
-        /* Responsivo */
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float::before {
+            content: '💬';
+            font-size: 24px;
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
-            .urgency-bar {
-                font-size: 0.9rem;
-                padding: 0.6rem;
+            .header-container {
+                padding: 0 15px;
             }
 
-            .hero {
-                padding-top: 80px;
+            .nav-menu {
+                gap: 15px;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 18px;
+                font-size: 0.9rem;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .hero-subtitle {
-                font-size: 1.2rem;
+            .hero p {
+                font-size: 1.1rem;
             }
 
-            .hero-video iframe {
-                height: 200px;
+            .hero-cta {
+                padding: 15px 30px;
+                font-size: 1rem;
             }
 
-            .services-grid {
+            .benefits-grid,
+            .services-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            .footer-main {
+            .video-container iframe {
+                height: 250px;
+            }
+
+            .benefits-title,
+            .services-title,
+            .carousel-title,
+            .testimonials-title,
+            .faq-title {
+                font-size: 2rem;
+            }
+
+            .final-cta-title {
+                font-size: 1.8rem;
+            }
+
+            .service-button,
+            .promo-button,
+            .final-cta-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .footer-container {
                 grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+                gap: 30px;
             }
         }
 
         @media (max-width: 480px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 80px 15px 30px;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
-            .cta-button {
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .services h2, .benefits h2 {
-                font-size: 2.2rem;
+            .benefits-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-card,
+            .service-card {
+                padding: 25px 20px;
+            }
+
+            .testimonial-card {
+                padding: 20px;
+            }
+
+            .carousel-slide {
+                padding: 40px 20px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Partículas animadas -->
-    <div class="particles">
-        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-        <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
-        <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
-        <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
-        <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
-        <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
-        <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
-    </div>
+    <div class="particles" id="particles"></div>
 
-    <!-- Alerta de Urgência -->
-    <div class="urgency-bar">
+    <!-- Header fixo -->
+    <header class="header">
+        <div class="header-container">
+            <img src="images/Logo.png" alt="WP Design IA" class="logo">
+            <nav class="nav-menu">
+                <a href="#promocoes" class="nav-link">Ver Promoções</a>
+                <a href="#exemplos" class="nav-link">Ver Exemplos</a>
+                <a href="#faq" class="nav-link">F.A.Q</a>
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="cta-button">Solicitar Orçamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Alert no topo -->
+    <div class="alert-bar">
         🚨 Seus concorrentes já estão usando IA. E você? Vai ficar para trás?
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Sua presença digital nunca mais será a mesma</h1>
-            <p class="hero-subtitle">Te ajudo a VENDER QUALQUER COISA com o poder da IA</p>
-            
+    <!-- Hero Section Combinada -->
+    <section class="hero-combined">
+        <div class="hero-combined-container">
+            <div class="hero-text">
+                <h1>Transforme sua presença digital com IA</h1>
+                <p>Te ajudo a VENDER QUALQUER COISA com o poder da inteligência artificial</p>
             <div class="hero-video">
-                <iframe src="https://www.youtube.com/embed/QSpXS7fRHRg?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/QSpXS7fRHRg?autoplay=1&mute=1&controls=1&showinfo=0&rel=0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="hero-cta">🚀 Quero Vender Mais com IA</a>
             </div>
-
-            <a href="https://wa.me/+5598984803934?text=Olá! Quero saber mais sobre os serviços com IA" class="cta-button">🚀 Quero Vender Mais com IA</a>
+            </div>
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section class="benefits">
-        <div class="container">
-            <h2>É por isso que você deveria estar usando IA ao seu favor</h2>
-            <div class="benefits-subtitle">A cada dia que passa sem IA profissional, você perde vendas para quem já descobriu esse poder</div>
+    <!-- Seção de Benefícios -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <h2 class="benefits-title">Por que a IA vai revolucionar suas vendas</h2>
+            <p class="benefits-subtitle">Enquanto você hesita, seus concorrentes já estão usando IA profissional</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23ff00ff' stroke-width='3'/%3E%3Cpath d='M30 50 L45 65 L70 35' fill='none' stroke='%2300d4ff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" alt="Conteúdo que Converte">
+                    <div class="benefit-image">
+                        <img src="images/beneficio-conversao.png" alt="Conteúdo que Converte">
                     </div>
-                    <h3>Conteúdo que Converte</h3>
-                    <p>Imagens e vídeos cientificamente criados para parar o scroll e transformar visitantes em clientes pagantes. A diferença entre quem vende pouco e quem vende muito.</p>
+                    <h3>Conteúdo que Gera Vendas</h3>
+                    <p>Imagens e vídeos otimizados que chamam atenção e transformam visitantes em clientes. A diferença entre quem vende pouco e quem vende muito.</p>
                 </div>
+                
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 L50 20 L80 80' fill='none' stroke='%23ff00ff' stroke-width='3'/%3E%3Ccircle cx='50' cy='30' r='8' fill='%2300d4ff'/%3E%3C/svg%3E" alt="Velocidade">
+                    <div class="benefit-image">
+                        <img src="images/beneficio-velocidade.png" alt="Resultados Rápidos">
                     </div>
-                    <h3>Resultados em Horas, Não Meses</h3>
-                    <p>Enquanto você pensa, outros já estão vendendo com Inteligência Artificial. Entregas em 24-72h vs semanas de produção tradicional.</p>
+                    <h3>Resultados Rápidos</h3>
+                    <p>Enquanto outros esperam semanas para gravar e editar vídeos de forma ultrapassada, você recebe materiais profissionais rapidamente e já começa a vender.</p>
                 </div>
+                
                 <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='30' width='60' height='40' fill='none' stroke='%23ff00ff' stroke-width='3' rx='5'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%2300d4ff' font-size='20' font-weight='bold'%3E$%3C/text%3E%3C/svg%3E" alt="Economia">
+                    <div class="benefit-image">
+                        <img src="images/beneficio-economia.png" alt="Economia Inteligente">
                     </div>
-                    <h3>Economia Real de Tempo e Dinheiro</h3>
-                    <p>Desbloqueie suas vendas com IA: pague menos, tenha mais resultado. IA não é luxo. É NECESSIDADE. Quem não se adapta, desaparece.</p>
+                    <h3>Economia Inteligente</h3>
+                    <p>Invista menos, ganhe mais. IA não é gasto, é investimento inteligente. Economize tempo e dinheiro criando conteúdo profissional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Promoção de Lançamento -->
-    <section class="promotion-section">
-        <div class="container">
-            <h2>🔥 Pacotes promocionais com IA por tempo limitado</h2>
-            <p>Hoje você decide: continuar igual ou MULTIPLICAR suas vendas com IA</p>
-            <a href="https://wa.me/+5598984803934?text=QUERO A PROMOÇÃO DE LANÇAMENTO! 🔥" class="cta-button">🔥 Garantir Minha Vaga</a>
+    <!-- Seção de Promoção Simplificada -->
+    <section class="promo-section" id="promocoes">
+        <div class="promo-container">
+            <h2 class="promo-title">🔥 Pacotes promocionais por tempo limitado</h2>
+            <p class="promo-subtitle">Hoje você decide: continuar igual ou transformar suas vendas com IA</p>
+            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20conhecer%20os%20pacotes%20promocionais%20com%20IA" class="promo-button">Ver Pacotes Promocionais</a>
         </div>
     </section>
 
-    <!-- Serviços -->
-    <section class="services">
-        <div class="container">
-            <h2>Serviços Personalizados com IA</h2>
-            <div class="services-subtitle">Criação sob medida para seu negócio - cada projeto é único e desenvolvido especialmente para você</div>
+    <!-- Seção de Serviços -->
+    <section class="services-section">
+        <div class="services-container">
+            <h2 class="services-title">Serviços Personalizados com IA</h2>
+            <p class="services-subtitle">Criação sob medida para seu negócio - cada projeto é único e desenvolvido especialmente para você</p>
             
             <div class="services-grid">
-                
-                <!-- Imagens IA -->
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <img src="/home/ubuntu/upload/icon_camera.webp" alt="Imagens IA">
+                    <div class="service-icon">
+                        <img src="images/icon_camera_ia.png" alt="Criação de Imagens">
+                    </div>
+                    <h3>Criação de Imagens com IA</h3>
+                    <p>Fotos profissionais que vendem. Criação ou edição com qualidade de estúdio em 24-48h.</p>
+                    
+                    <div class="price-box">
+                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
+                        <div class="price-item">
+                            <span>4 imagens</span>
+                            <span><span class="price-old">R$ 70</span> <span class="price-new">R$ 50</span></span>
                         </div>
-                        <h3>Criação de Imagens com IA</h3>
-                        <p>Fotos profissionais que vendem. Criação ou edição com qualidade de estúdio em 24-48h.</p>
+                        <div class="price-item">
+                            <span>8 imagens</span>
+                            <span><span class="price-old">R$ 140</span> <span class="price-new">R$ 80</span></span>
+                        </div>
+                        <div class="price-item">
+                            <span>12 imagens</span>
+                            <span><span class="price-old">R$ 210</span> <span class="price-new">R$ 110</span></span>
+                        </div>
                     </div>
-                    <div class="price-comparison">
-                        <h4>💥 VALORES PROMOCIONAIS</h4>
-                        <ul class="price-list">
-                            <li>Plano Basic: 4 imagens <span class="price-old">R$ 70</span> <span class="price-new">R$ 50</span></li>
-                            <li>Plano Prime: 10 imagens <span class="price-old">R$ 150</span> <span class="price-new">R$ 100</span></li>
-                            <li>Plano Premium: 20 imagens <span class="price-old">R$ 280</span> <span class="price-new">R$ 180</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/+5598984803934?text=Quero criar imagens que vendem com IA! 📸" class="service-cta">Criar Minhas Imagens</a>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20imagens%20com%20IA" class="service-button">Criar Minhas Imagens</a>
                 </div>
 
-                <!-- Artes Elaboradas -->
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <img src="/home/ubuntu/upload/icon_artescala_ia.webp" alt="Artes">
+                    <div class="service-icon">
+                        <img src="images/icon_palette_ia.png" alt="Artes Elaboradas">
+                    </div>
+                    <h3>Artes Elaboradas</h3>
+                    <p>Posts, flyers e banners com pós-edição profissional que param o scroll e vendem.</p>
+                    
+                    <div class="price-box">
+                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
+                        <div class="price-item">
+                            <span>4 artes</span>
+                            <span><span class="price-old">R$ 180</span> <span class="price-new">R$ 120</span></span>
                         </div>
-                        <h3>Artes Elaboradas</h3>
-                        <p>Posts, flyers e banners com pós-edição profissional que param o scroll e vendem.</p>
+                        <div class="price-item">
+                            <span>8 artes</span>
+                            <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 230</span></span>
+                        </div>
+                        <div class="price-item">
+                            <span>12 artes</span>
+                            <span><span class="price-old">R$ 480</span> <span class="price-new">R$ 300</span></span>
+                        </div>
                     </div>
-                    <div class="price-comparison">
-                        <h4>💥 VALORES PROMOCIONAIS</h4>
-                        <ul class="price-list">
-                            <li>1 arte personalizada <span class="price-old">R$ 50</span> <span class="price-new">R$ 30</span></li>
-                            <li>5 artes elaboradas <span class="price-old">R$ 200</span> <span class="price-new">R$ 140</span></li>
-                            <li>10 artes + variações <span class="price-old">R$ 350</span> <span class="price-new">R$ 260</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/+5598984803934?text=Preciso de artes que vendem! 🎨" class="service-cta">Transformar Redes Sociais</a>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20artes%20elaboradas" class="service-button">Transformar Redes Sociais</a>
                 </div>
 
-                <!-- Avatares Virtuais -->
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <img src="/home/ubuntu/upload/icon_avatar.webp" alt="Avatar">
+                    <div class="service-icon">
+                        <img src="images/icon_avatar_ia.png" alt="Avatares Exclusivos">
+                    </div>
+                    <h3>Avatares Exclusivos</h3>
+                    <p>Perfeito para usar em reels, posts ou figurinhas. Identidade digital que gera confiança.</p>
+                    
+                    <div class="price-box">
+                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
+                        <div class="price-item">
+                            <span>4 cenas</span>
+                            <span><span class="price-old">R$ 120</span> <span class="price-new">R$ 80</span></span>
                         </div>
-                        <h3>Avatares Exclusivos</h3>
-                        <p>Perfeito para usar em reels, posts ou figurinhas. Identidade digital que gera confiança.</p>
+                        <div class="price-item">
+                            <span>8 cenas</span>
+                            <span><span class="price-old">R$ 240</span> <span class="price-new">R$ 140</span></span>
+                        </div>
+                        <div class="price-item">
+                            <span>12 cenas</span>
+                            <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 200</span></span>
+                        </div>
                     </div>
-                    <div class="price-comparison">
-                        <h4>💥 VALORES PROMOCIONAIS</h4>
-                        <ul class="price-list">
-                            <li>Plano Basic: 10 imagens <span class="price-old">R$ 220</span> <span class="price-new">R$ 150</span></li>
-                            <li>Plano Prime: 20 imagens <span class="price-old">R$ 380</span> <span class="price-new">R$ 250</span></li>
-                            <li>Plano Premium: 30 imagens <span class="price-old">R$ 500</span> <span class="price-new">R$ 300</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/+5598984803934?text=Quero meu avatar digital exclusivo! 👤" class="service-cta">Criar Meu Avatar</a>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20meu%20avatar%20exclusivo" class="service-button">Criar Meu Avatar</a>
                 </div>
 
-                <!-- Vídeos Publicitários -->
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <img src="/home/ubuntu/upload/icon_video.webp" alt="Vídeos">
+                    <div class="service-icon">
+                        <img src="images/icon_video_ia.png" alt="Vídeos Profissionais">
+                    </div>
+                    <h3>Vídeos Profissionais com IA</h3>
+                    <p>Anúncios modernos que convertem. Pare de perder clientes para quem tem vídeos profissionais.</p>
+                    
+                    <div class="price-box">
+                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
+                        <div class="price-item">
+                            <span>Vídeo rápido (~8s )</span>
+                            <span><span class="price-old">R$ 100</span> <span class="price-new">R$ 80</span></span>
                         </div>
-                        <h3>Vídeos Profissionais com IA</h3>
-                        <p>Anúncios modernos que convertem. Pare de perder clientes para quem tem vídeos profissionais.</p>
+                        <div class="price-item">
+                            <span>Vídeo curto (~16s)</span>
+                            <span><span class="price-old">R$ 200</span> <span class="price-new">R$ 140</span></span>
+                        </div>
+                        <div class="price-item">
+                            <span>Vídeo Plus (~32s)</span>
+                            <span><span class="price-old">R$ 400</span> <span class="price-new">R$ 250</span></span>
+                        </div>
+                        <div class="price-item">
+                            <span>Vídeo Premium (~56s)</span>
+                            <span><span class="price-old">R$ 600</span> <span class="price-new">R$ 420</span></span>
+                        </div>
                     </div>
-                    <div class="price-comparison">
-                        <h4>💥 VALORES PROMOCIONAIS</h4>
-                        <ul class="price-list">
-                            <li>Vídeo rápido (~8s) <span class="price-old">R$ 100</span> <span class="price-new">R$ 80</span></li>
-                            <li>Vídeo curto (~16s) <span class="price-old">R$ 200</span> <span class="price-new">R$ 140</span></li>
-                            <li>Vídeo Plus (~32s) <span class="price-old">R$ 400</span> <span class="price-new">R$ 250</span></li>
-                            <li>Vídeo Premium (~56s) <span class="price-old">R$ 600</span> <span class="price-new">R$ 420</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/+5598984803934?text=Preciso de vídeos que vendem! 🎬" class="service-cta">Fazer Meus Vídeos</a>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20vídeos%20profissionais%20com%20IA" class="service-button">Fazer Meus Vídeos</a>
                 </div>
 
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/icon_website_ia.png" alt="Catálogos, Portfólios e Sites">
+                    </div>
+                    <h3>Catálogos, Portfólios e Sites</h3>
+                    <p>Catálogos digitais, portfólios e landing pages profissionais. Apresente seus produtos e serviços com credibilidade e converta mais visitantes em clientes.</p>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20meu%20site%20profissional" class="service-button">Solicitar Orçamento</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Antes e Depois -->
-    <section class="before-after">
-        <div class="container">
-            <h2>Veja a Transformação Real</h2>
-            <p>Resultados que falam por si só. Sua marca pode ser a próxima!</p>
+    <!-- Planos Mensais -->
+    <section class="plans-section">
+        <div class="plans-container">
+            <h2 class="plans-title">Planos Mensais Combo</h2>
+            <p class="plans-subtitle">Combos especiais com desconto para quem quer resultados constantes</p>
             
-            <div class="carousel-container">
-                <div class="carousel" id="carousel">
-                    <div class="carousel-item">
-                        <p>Projeto 1 - Antes e Depois</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Plano Basic</h3>
+                    <div class="plan-price">
+                        <span class="price-old">R$ 470</span>
+                        <span class="price-new">R$ 380</span>
+                        <span class="price-period">/mês</span>
                     </div>
-                    <div class="carousel-item">
-                        <p>Projeto 2 - Antes e Depois</p>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✅ 4 imagens</div>
+                        <div class="feature-item">✅ 4 artes</div>
+                        <div class="feature-item">✅ 4 cenas de avatar</div>
+                        <div class="feature-item">✅ 1 vídeo rápido</div>
                     </div>
-                    <div class="carousel-item">
-                        <p>Projeto 3 - Antes e Depois</p>
-                    </div>
-                    <div class="carousel-item">
-                        <p>Projeto 4 - Antes e Depois</p>
-                    </div>
-                    <div class="carousel-item">
-                        <p>Projeto 5 - Antes e Depois</p>
-                    </div>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Basic" class="plan-button">Quero Este Plano</a>
                 </div>
-                <div class="carousel-nav">
-                    <div class="carousel-dot active" data-slide="0"></div>
-                    <div class="carousel-dot" data-slide="1"></div>
-                    <div class="carousel-dot" data-slide="2"></div>
-                    <div class="carousel-dot" data-slide="3"></div>
-                    <div class="carousel-dot" data-slide="4"></div>
+
+                <div class="plan-card">
+                    <h3>Plano Prime</h3>
+                    <div class="plan-price">
+                        <span class="price-old">R$ 940</span>
+                        <span class="price-new">R$ 570</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✅ 8 imagens</div>
+                        <div class="feature-item">✅ 8 artes</div>
+                        <div class="feature-item">✅ 8 cenas de avatar</div>
+                        <div class="feature-item">✅ 1 vídeo curto (ou 2 rápidos )</div>
+                    </div>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Prime" class="plan-button">Quero Este Plano</a>
                 </div>
+
+                <div class="plan-card featured">
+                    <div class="plan-badge">DESTAQUE</div>
+                    <h3>Plano Premium</h3>
+                    <div class="plan-price">
+                        <span class="price-old">R$ 1.450</span>
+                        <span class="price-new">R$ 830</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✅ 12 imagens</div>
+                        <div class="feature-item">✅ 12 artes</div>
+                        <div class="feature-item">✅ 12 cenas de avatar</div>
+                        <div class="feature-item">✅ 1 vídeo Plus (ou 4 rápidos )</div>
+                    </div>
+                    
+                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Premium" class="plan-button">Quero Este Plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Prova Social -->
+    <section class="carousel-section" id="exemplos">
+        <div class="carousel-container">
+            <h2 class="carousel-title">Veja a Transformação Real</h2>
+            <p class="carousel-subtitle">Resultados que falam por si só. Sua marca pode ser a próxima!</p>
+            
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="images/antes-depois-1.png" alt="Projeto 1 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-2.png" alt="Projeto 2 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-3.png" alt="Projeto 3 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-4.png" alt="Projeto 4 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-5.png" alt="Projeto 5 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                </div>
+            </div>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1 )"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
             </div>
         </div>
     </section>
 
     <!-- Depoimentos -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>O que nossos clientes dizem</h2>
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-title">O que nossos clientes dizem</h2>
+            
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="/home/ubuntu/upload/avatar_maria.webp" alt="Maria Silva">
+                            <img src="images/avatar_maria.jpeg" alt="Carla Mendes">
                         </div>
                         <div class="testimonial-info">
-                            <h4>Maria Silva - E-commerce de Moda</h4>
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                            <h4>Carla Mendes</h4>
+                            <p>Corretora de Imóveis</p>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Minhas vendas aumentaram 300% depois que comecei a usar as imagens com IA. O conteúdo realmente converte!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Fique chocada, não acreditei quando vi o resultado! Minhas fotos ficaram incríveis e agora consigo vender muito mais. Os clientes ficam impressionados com a qualidade das imagens dos imóveis."</p>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="/home/ubuntu/upload/avatar_joao.webp" alt="João Santos">
+                            <img src="images/avatar_joao.jpeg" alt="João Ferreira">
                         </div>
                         <div class="testimonial-info">
-                            <h4>João Santos - Consultor Digital</h4>
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                            <h4>João Ferreira</h4>
+                            <p>Empreendedor</p>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Os avatares exclusivos me ajudaram a criar uma identidade única. Agora meus clientes me reconhecem em qualquer lugar!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Rapaz, que diferença! Antes eu gastava uma fortuna com fotógrafo e ainda demorava semanas. Agora tenho conteúdo profissional rapidinho e por um preço que cabe no bolso. Recomendo demais!"</p>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="/home/ubuntu/upload/avatar_ana.webp" alt="Ana Costa">
+                            <img src="images/avatar_ana.jpeg" alt="Ana Beatriz">
                         </div>
                         <div class="testimonial-info">
-                            <h4>Ana Costa - Agência de Marketing</h4>
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                            <h4>Ana Beatriz</h4>
+                            <p>Lojista</p>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Os vídeos com IA revolucionaram nossa entrega. Conseguimos atender mais clientes com qualidade superior!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Gente, que trabalho incrível! Meu Instagram explodiu depois que comecei a usar as artes com meu avatar. Agora consigo ter vídeos sem nem precisar me maquiar nem nada kkk. As clientes adoram e sempre perguntam onde faço. Super indico!"</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Dúvidas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        🤔 Quanto tempo demora para entregar?
-                    </div>
-                    <div class="faq-answer">
-                        <strong>Imagens e Artes:</strong> 24 a 48h<br>
-                        <strong>Avatares:</strong> 48 a 72h<br>
-                        <strong>Vídeos:</strong> 48 a 72h<br>
-                        Entregas rápidas para você começar a vender mais rapidamente.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        💰 Como funciona o pagamento?
-                    </div>
-                    <div class="faq-answer">
-                        <strong>50% na contratação</strong> e <strong>50% na entrega</strong>. Aceitamos PIX, cartão e transferência. Você só paga o restante quando aprovar o resultado!
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        🔄 E se eu não gostar do resultado?
-                    </div>
-                    <div class="faq-answer">
-                        Fazemos <strong>até 2 rodadas de ajustes gratuitos</strong> para garantir que fique exatamente como você imaginou. Sua satisfação é nossa prioridade!
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        📱 Preciso enviar algum material?
-                    </div>
-                    <div class="faq-answer">
-                        Depende do serviço:<br>
-                        <strong>• Imagens:</strong> Suas fotos originais (para edição) ou apenas uma descrição<br>
-                        <strong>• Avatares:</strong> Algumas fotos suas de referência<br>
-                        <strong>• Artes:</strong> Textos, cores preferidas e estilo desejado<br>
-                        <strong>• Vídeos:</strong> Materiais visuais e roteiro/briefing
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        🚀 Por que devo escolher IA ao invés de métodos tradicionais?
-                    </div>
-                    <div class="faq-answer">
-                        <strong>Velocidade:</strong> Horas vs semanas<br>
-                        <strong>Custo:</strong> 60-80% mais barato que produção tradicional<br>
-                        <strong>Qualidade:</strong> Resultado profissional garantido<br>
-                        <strong>Flexibilidade:</strong> Ajustes ilimitados até aprovar
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Pare de Perder Vendas Hoje Mesmo</h2>
-            <p>Seus concorrentes já descobriram o poder da IA. Não fique para trás enquanto eles faturam mais!</p>
-            <a href="https://wa.me/+5598984803934?text=ESTOU PRONTO PARA MULTIPLICAR MINHAS VENDAS COM IA! Vamos começar agora? 🚀" class="cta-button">🚀 Desbloqueir Minhas Vendas Agora</a>
-        </div>
-    </section>
-
-    <!-- Footer Completo -->
-    <footer>
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-section">
-                    <img src="/home/ubuntu/upload/logo.webp" alt="WP Design IA" style="height: 60px; margin-bottom: 1rem;">
-                    <p>Transformando negócios com Inteligência Artificial desde 2024. Mais de 500 clientes satisfeitos vendendo mais com nossos materiais.</p>
-                    <div class="social-links">
-                        <a href="https://wa.me/+5598984803934" title="WhatsApp">💬</a>
-                        <a href="#" title="Instagram">📷</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Nossos Serviços</h4>
-                    <ul>
-                        <li>Criação de Imagens com IA</li>
-                        <li>Artes Elaboradas para Redes Sociais</li>
-                        <li>Avatares Virtuais Exclusivos</li>
-                        <li>Vídeos Publicitários Profissionais</li>
-                        <li>Consultoria em IA para Vendas</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Garantias</h4>
-                    <ul>
-                        <li>Entrega no prazo combinado</li>
-                        <li>2 revisões gratuitas incluídas</li>
-                        <li>Suporte pós-entrega</li>
-                        <li>Satisfação garantida ou reembolso</li>
-                        <li>Materiais em alta resolução</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p><strong>WhatsApp:</strong> +55 (98) 98480-3934</p>
-                    <p><strong>Horário:</strong> Seg-Sex, 8h às 18h</p>
-                    <p><strong>Localização:</strong> São Luís, Maranhão</p>
-                    <p><strong>Atendimento:</strong> Todo o Brasil</p>
-                </div>
-            </div>
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Dúvidas Frequentes</h2>
             
-            <div class="footer-bottom">
-                <p>WP Design IA © 2025 – Venda mais com Inteligência Artificial | Todos os direitos reservados</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>🤔 Quanto tempo demora para entregar?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Imagens e Artes:</strong> 24h a 48h 
+
+                    <strong>Avatares:</strong> 48h a 72h  
+
+                    <strong>Vídeos:</strong> 48h a 72h  
+
+O prazo pode mudar de acordo com o pacote escolhido .</p>
+                </div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>💰 Como funciona o pagamento?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>50% na contratação</strong> e <strong>50% na entrega</strong>. Aceitamos PIX, cartão e transferência. Você só paga o restante quando aprovar o resultado!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>🔄 E se eu não gostar do resultado?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fazemos <strong>até 2 rodadas de ajustes gratuitos</strong> para garantir que fique exatamente como você imaginou. Sua satisfação é nossa prioridade!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>🤖 A IA substitui um profissional?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Não. A IA é uma ferramenta poderosa, mas o toque humano e a direção criativa são essenciais. Eu uso a IA para acelerar o processo e entregar resultados incríveis, mas a estratégia e a personalização são minhas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>🎨 Preciso enviar alguma foto ou vídeo?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Depende do serviço. Para avatares, sim ( se desejar que seja parecido com você ou com alguém). Para outros serviços, podemos criar tudo do zero com IA ou usar materiais que você já tenha. Vamos conversar e definir a melhor abordagem para o seu projeto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final CTA -->
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <h2 class="final-cta-title">Pronto para transformar seu negócio?</h2>
+            <p class="final-cta-text">Chega de conteúdo amador. Invista em materiais que vendem e veja seus resultados decolarem. Fale comigo agora e vamos começar!</p>
+            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20transformar%20meu%20negócio%20com%20IA" class="final-cta-button">🚀 Quero Vender Mais Agora</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>WP Design IA</h3>
+                <p>Transformando ideias em resultados com o poder da Inteligência Artificial.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="#promocoes">Promoções</a>  
+
+                <a href="#exemplos">Exemplos</a>  
+
+                <a href="#faq">F.A.Q</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><strong>WhatsApp:</strong> (98 ) 98480-3934</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WP Design IA. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/+5598984803934?text=Olá! Quero saber mais sobre os serviços com IA" class="whatsapp-float" title="Fale conosco no WhatsApp">
-        💬
-    </a>
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/+5598984803934?text=Olá!%20Estou%20na%20sua%20página%20e%20quero%20saber%20mais" class="whatsapp-float" target="_blank"></a>
 
     <script>
-        // FAQ Interativo
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
+        // Script para partículas animadas
+        function createParticles( ) {
+            const particlesContainer = document.getElementById('particles');
+            const particlesCount = 50;
 
-        // Carrossel
-        let currentSlide = 0;
-        const carousel = document.getElementById('carousel');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const totalSlides = 5;
-
-        function showSlide(index) {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[index].classList.add('active');
+            for (let i = 0; i < particlesCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particlesContainer.appendChild(particle);
+            }
         }
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
-        });
+        // Script para o carrossel
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[slideIndex - 1].classList.add('active');
+            indicators[slideIndex - 1].classList.add('active');
+        }
 
         // Auto-advance carrossel
         setInterval(() => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
+            slideIndex++;
+            showSlide(slideIndex);
         }, 5000);
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Fechar todos os FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Abrir o FAQ clicado se não estava ativo
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
 
         // Smooth scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
+
+        // Inicializar partículas quando a página carregar
+        window.addEventListener('load', createParticles);
     </script>
 </body>
 </html>
-
