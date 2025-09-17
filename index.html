@@ -46,17 +46,12 @@
             50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
         }
 
-        /* Header fixo */
+        /* Header não fixo */
         .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 0, 255, 0.2);
             padding: 15px 0;
-            z-index: 1000;
             transition: all 0.3s ease;
         }
 
@@ -71,39 +66,6 @@
 
         .logo {
             height: 60px;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-link {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: #00d4ff;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, #ff00ff, #00d4ff);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
         }
 
         .cta-button {
@@ -123,15 +85,16 @@
             box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
         }
 
-        /* Alert no topo */
+        /* Alert no topo - ajustado */
         .alert-bar {
             background: linear-gradient(45deg, #ff00ff, #ff1493);
             color: #ffffff;
             text-align: center;
-            padding: 12px 20px;
+            padding: 15px 20px;
             font-weight: bold;
-            margin-top: 70px;
             animation: pulse 2s infinite;
+            position: relative;
+            z-index: 10;
         }
 
         @keyframes pulse {
@@ -139,87 +102,13 @@
             50% { opacity: 0.8; }
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 20px 50px;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff00ff, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); }
-            to { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5)); }
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: #cccccc;
-        }
-
-        .hero-cta {
-            background: linear-gradient(45deg, #ff00ff, #00d4ff);
-            color: #ffffff;
-            padding: 18px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .hero-cta:hover::before {
-            left: 100%;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
-        }
-
-        /* Hero Section Combinada */
+        /* Hero Section Combinada - Melhorada */
         .hero-combined {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 120px 20px 50px;
+            padding: 60px 20px;
             position: relative;
         }
 
@@ -247,6 +136,11 @@
             animation: glow 2s ease-in-out infinite alternate;
         }
 
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5)); }
+        }
+
         .hero-text p {
             font-size: 1.3rem;
             margin-bottom: 30px;
@@ -264,6 +158,7 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             border: 2px solid rgba(255, 0, 255, 0.3);
+            margin-bottom: 30px;
         }
 
         .video-container iframe {
@@ -272,11 +167,55 @@
             border: none;
         }
 
+        .hero-cta {
+            background: linear-gradient(45deg, #ff00ff, #00d4ff);
+            color: #ffffff;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
+        }
+
         /* Responsividade para Hero Combinada */
         @media (max-width: 768px) {
+            .hero-combined {
+                min-height: auto;
+                padding: 40px 20px;
+            }
+
             .hero-combined-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
                 text-align: center;
             }
 
@@ -290,6 +229,11 @@
 
             .video-container iframe {
                 height: 250px;
+            }
+
+            .hero-cta {
+                font-size: 1rem;
+                padding: 15px 30px;
             }
         }
 
@@ -435,7 +379,7 @@
             box-shadow: 0 10px 30px rgba(255, 0, 255, 0.5);
         }
 
-        /* Seção de Serviços */
+        /* Seção de Serviços - Removido "valores promocionais" */
         .services-section {
             padding: 100px 20px;
             background: rgba(0, 0, 0, 0.2);
@@ -556,7 +500,7 @@
             box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3);
         }
 
-        /* Planos Mensais */
+        /* Planos Mensais - Com frases de impacto */
         .plans-section {
             padding: 100px 20px;
             background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 212, 255, 0.1));
@@ -629,6 +573,18 @@
             font-weight: bold;
         }
 
+        /* Frases de impacto nos planos */
+        .plan-impact {
+            background: linear-gradient(45deg, #ff6b35, #ff00ff);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
         .plan-card h3 {
             font-size: 1.8rem;
             color: #00d4ff;
@@ -691,7 +647,7 @@
             box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
         }
 
-        /* Carrossel de Prova Social */
+        /* Carrossel de Prova Social - Melhorado */
         .carousel-section {
             padding: 60px 20px;
             background: rgba(255, 0, 255, 0.05);
@@ -725,6 +681,7 @@
             border-radius: 15px;
             background: rgba(0, 0, 0, 0.3);
             border: 2px solid rgba(255, 0, 255, 0.3);
+            touch-action: pan-y;
         }
 
         .carousel-slide {
@@ -735,6 +692,45 @@
 
         .carousel-slide.active {
             display: block;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 0, 255, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255, 0, 255, 0.9);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
         }
 
         .carousel-indicators {
@@ -1045,30 +1041,9 @@
                 padding: 0 15px;
             }
 
-            .nav-menu {
-                gap: 15px;
-            }
-
-            .nav-link {
-                font-size: 0.9rem;
-            }
-
             .cta-button {
                 padding: 10px 18px;
                 font-size: 0.9rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-cta {
-                padding: 15px 30px;
-                font-size: 1rem;
             }
 
             .benefits-grid,
@@ -1076,10 +1051,6 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .video-container iframe {
-                height: 250px;
             }
 
             .benefits-title,
@@ -1105,23 +1076,28 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 480px) {
-            .nav-menu {
-                flex-direction: column;
-                gap: 10px;
+            .hero-combined {
+                padding: 30px 15px;
             }
 
-            .hero {
-                padding: 80px 15px 30px;
-            }
-
-            .hero h1 {
+            .hero-text h1 {
                 font-size: 2rem;
             }
 
-            .hero p {
+            .hero-text p {
                 font-size: 1rem;
             }
 
@@ -1140,7 +1116,16 @@
             }
 
             .carousel-slide {
-                padding: 40px 20px;
+                padding: 15px;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .plan-card {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -1149,16 +1134,11 @@
     <!-- Partículas animadas -->
     <div class="particles" id="particles"></div>
 
-    <!-- Header fixo -->
+    <!-- Header não fixo -->
     <header class="header">
         <div class="header-container">
             <img src="images/Logo.png" alt="WP Design IA" class="logo">
-            <nav class="nav-menu">
-                <a href="#promocoes" class="nav-link">Ver Promoções</a>
-                <a href="#exemplos" class="nav-link">Ver Exemplos</a>
-                <a href="#faq" class="nav-link">F.A.Q</a>
-                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="cta-button">Solicitar Orçamento</a>
-            </nav>
+            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="cta-button">Solicitar Orçamento</a>
         </div>
     </header>
 
@@ -1173,15 +1153,15 @@
             <div class="hero-text">
                 <h1>Transforme sua presença digital com IA</h1>
                 <p>Te ajudo a VENDER QUALQUER COISA com o poder da inteligência artificial</p>
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="hero-cta">🚀 Quero Vender Mais com IA</a>
+            </div>
             <div class="hero-video">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/QSpXS7fRHRg?autoplay=1&mute=1&controls=1&showinfo=0&rel=0" 
+                    <iframe src="https://www.youtube.com/embed/QSpXS7fRHRg?autoplay=1&mute=0&controls=1&showinfo=0&rel=0" 
                             allow="autoplay; encrypted-media" 
                             allowfullscreen>
                     </iframe>
                 </div>
-            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="hero-cta">🚀 Quero Vender Mais com IA</a>
-            </div>
             </div>
         </div>
     </section>
@@ -1189,8 +1169,8 @@
     <!-- Seção de Benefícios -->
     <section class="benefits-section">
         <div class="benefits-container">
-            <h2 class="benefits-title">Por que a IA vai revolucionar suas vendas</h2>
-            <p class="benefits-subtitle">Enquanto você hesita, seus concorrentes já estão usando IA profissional</p>
+            <h2 class="benefits-title">Por que a IA vai revolucionar suas vendas?</h2>
+            <p class="benefits-subtitle">Porque quem domina a IA primeiro, domina o mercado depois</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
@@ -1225,8 +1205,7 @@
         <div class="promo-container">
             <h2 class="promo-title">🔥 Pacotes promocionais por tempo limitado</h2>
             <p class="promo-subtitle">Hoje você decide: continuar igual ou transformar suas vendas com IA</p>
-            <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20conhecer%20os%20pacotes%20promocionais%20com%20IA" class="promo-button">Ver Pacotes Promocionais</a>
-        </div>
+            <a href="#plans" class="promo-button">Ver Pacotes Promocionais</a>        </div> 
     </section>
 
     <!-- Seção de Serviços -->
@@ -1241,10 +1220,9 @@
                         <img src="images/icon_camera_ia.png" alt="Criação de Imagens">
                     </div>
                     <h3>Criação de Imagens com IA</h3>
-                    <p>Fotos profissionais que vendem. Criação ou edição com qualidade de estúdio em 24-48h.</p>
+                    <p>Fotos profissionais que vendem. Criação ou edição com qualidade de estúdio sem precisar contratar influencers/modelos e fotógrafos caros.</p>
                     
                     <div class="price-box">
-                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
                         <div class="price-item">
                             <span>4 imagens</span>
                             <span><span class="price-old">R$ 70</span> <span class="price-new">R$ 50</span></span>
@@ -1267,10 +1245,9 @@
                         <img src="images/icon_palette_ia.png" alt="Artes Elaboradas">
                     </div>
                     <h3>Artes Elaboradas</h3>
-                    <p>Posts, flyers e banners com pós-edição profissional que param o scroll e vendem.</p>
+                    <p>Posts para as Redes Sociais, flyers , banners... com pós-edição profissional que atrai e converte.</p>
                     
                     <div class="price-box">
-                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
                         <div class="price-item">
                             <span>4 artes</span>
                             <span><span class="price-old">R$ 180</span> <span class="price-new">R$ 120</span></span>
@@ -1293,10 +1270,9 @@
                         <img src="images/icon_avatar_ia.png" alt="Avatares Exclusivos">
                     </div>
                     <h3>Avatares Exclusivos</h3>
-                    <p>Perfeito para usar em reels, posts ou figurinhas. Identidade digital que gera confiança.</p>
+                    <p>Perfeito para usar em reels, posts ou até figurinhas! Tenha a sua própria 'Lu do Magalu' - uma porta-voz digital que trabalha 24h por você.</p>
                     
                     <div class="price-box">
-                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
                         <div class="price-item">
                             <span>4 cenas</span>
                             <span><span class="price-old">R$ 120</span> <span class="price-new">R$ 80</span></span>
@@ -1319,12 +1295,10 @@
                         <img src="images/icon_video_ia.png" alt="Vídeos Profissionais">
                     </div>
                     <h3>Vídeos Profissionais com IA</h3>
-                    <p>Anúncios modernos que convertem. Pare de perder clientes para quem tem vídeos profissionais.</p>
-                    
+                    <p>Qualquer vídeo que imaginar, criamos com IA. Sem filmmaker, sem influenciador, sem custos absurdos.</p>                    
                     <div class="price-box">
-                        <h4 style="color: #ff6b35; margin-bottom: 10px;">💥 VALORES PROMOCIONAIS</h4>
                         <div class="price-item">
-                            <span>Vídeo rápido (~8s )</span>
+                            <span>Vídeo rápido (~8s)</span>
                             <span><span class="price-old">R$ 100</span> <span class="price-new">R$ 80</span></span>
                         </div>
                         <div class="price-item">
@@ -1358,13 +1332,14 @@
     </section>
 
     <!-- Planos Mensais -->
-    <section class="plans-section">
+    <section class="plans-section" id="plans">
         <div class="plans-container">
             <h2 class="plans-title">Planos Mensais Combo</h2>
             <p class="plans-subtitle">Combos especiais com desconto para quem quer resultados constantes</p>
             
             <div class="plans-grid">
                 <div class="plan-card">
+                    <div class="plan-impact">💪 Para quem está começando</div>
                     <h3>Plano Basic</h3>
                     <div class="plan-price">
                         <span class="price-old">R$ 470</span>
@@ -1383,6 +1358,7 @@
                 </div>
 
                 <div class="plan-card">
+                    <div class="plan-impact">🚀 Acelere suas vendas</div>
                     <h3>Plano Prime</h3>
                     <div class="plan-price">
                         <span class="price-old">R$ 940</span>
@@ -1394,18 +1370,18 @@
                         <div class="feature-item">✅ 8 imagens</div>
                         <div class="feature-item">✅ 8 artes</div>
                         <div class="feature-item">✅ 8 cenas de avatar</div>
-                        <div class="feature-item">✅ 1 vídeo curto (ou 2 rápidos )</div>
-                    </div>
-                    
+                        <div class="feature-item">✅ 1 vídeo curto (ou 2 rápidos)</div>
+                    </div>          
                     <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Prime" class="plan-button">Quero Este Plano</a>
                 </div>
 
                 <div class="plan-card featured">
-                    <div class="plan-badge">DESTAQUE</div>
+                    <div class="plan-badge">MELHOR CUSTO BENEFÍCIO!</div>
+                    <div class="plan-impact">💎 Domine o mercado</div>
                     <h3>Plano Premium</h3>
                     <div class="plan-price">
                         <span class="price-old">R$ 1.450</span>
-                        <span class="price-new">R$ 830</span>
+                        <span class="price-new">R$ 800</span>
                         <span class="price-period">/mês</span>
                     </div>
                     
@@ -1413,12 +1389,14 @@
                         <div class="feature-item">✅ 12 imagens</div>
                         <div class="feature-item">✅ 12 artes</div>
                         <div class="feature-item">✅ 12 cenas de avatar</div>
-                        <div class="feature-item">✅ 1 vídeo Plus (ou 4 rápidos )</div>
+                        <div class="feature-item">✅ 1 vídeo Plus (ou 4 rápidos)</div>
                     </div>
                     
                     <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Premium" class="plan-button">Quero Este Plano</a>
                 </div>
             </div>
+                </p>Enquanto você hesita, seus concorrentes já estão usando IA profissional, e você está perdendo dinhieiro.</p>
+
         </div>
     </section>
 
@@ -1429,29 +1407,42 @@
             <p class="carousel-subtitle">Resultados que falam por si só. Sua marca pode ser a próxima!</p>
             
             <div class="carousel">
+                <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
+                <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
+                
                 <div class="carousel-slide active">
-                    <img src="images/antes-depois-1.png" alt="Projeto 1 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                    <img src="images/antes-depois-1.png" alt="Projeto 1 - Antes e Depois">
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/antes-depois-2.png" alt="Projeto 2 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                    <img src="images/antes-depois-2.png" alt="Projeto 2 - Antes e Depois">
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/antes-depois-3.png" alt="Projeto 3 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                    <img src="images/antes-depois-3.png" alt="Projeto 3 - Antes e Depois">
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/antes-depois-4.png" alt="Projeto 4 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                    <img src="images/antes-depois-4.png" alt="Projeto 4 - Antes e Depois">
                 </div>
                 <div class="carousel-slide">
-                    <img src="images/antes-depois-5.png" alt="Projeto 5 - Antes e Depois" style="width:100%; height:auto; border-radius:15px;">
+                    <img src="images/antes-depois-5.png" alt="Projeto 5 - Antes e Depois">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-6.png" alt="Projeto 6 - Antes e Depois">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/antes-depois-7.png" alt="Projeto 7 - Antes e Depois">
+
                 </div>
             </div>
             
             <div class="carousel-indicators">
-                <span class="indicator active" onclick="currentSlide(1 )"></span>
+                <span class="indicator active" onclick="currentSlide(1)"></span>
                 <span class="indicator" onclick="currentSlide(2)"></span>
                 <span class="indicator" onclick="currentSlide(3)"></span>
                 <span class="indicator" onclick="currentSlide(4)"></span>
                 <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+                <span class="indicator" onclick="currentSlide(7)"></span>
+
             </div>
         </div>
     </section>
@@ -1524,7 +1515,7 @@
 
                     <strong>Vídeos:</strong> 48h a 72h  
 
-O prazo pode mudar de acordo com o pacote escolhido .</p>
+O prazo pode mudar de acordo com o pacote escolhido.</p>
                 </div>
             </div>
 
@@ -1547,24 +1538,14 @@ O prazo pode mudar de acordo com o pacote escolhido .</p>
                     <p>Fazemos <strong>até 2 rodadas de ajustes gratuitos</strong> para garantir que fique exatamente como você imaginou. Sua satisfação é nossa prioridade!</p>
                 </div>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <h3>🤖 A IA substitui um profissional?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Não. A IA é uma ferramenta poderosa, mas o toque humano e a direção criativa são essenciais. Eu uso a IA para acelerar o processo e entregar resultados incríveis, mas a estratégia e a personalização são minhas.</p>
-                </div>
-            </div>
-
+        
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
                     <h3>🎨 Preciso enviar alguma foto ou vídeo?</h3>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Depende do serviço. Para avatares, sim ( se desejar que seja parecido com você ou com alguém). Para outros serviços, podemos criar tudo do zero com IA ou usar materiais que você já tenha. Vamos conversar e definir a melhor abordagem para o seu projeto.</p>
+                    <p>Depende do serviço. Para avatares, sim (se desejar que seja parecido com você ou com alguém). Para outros serviços, podemos criar tudo do zero com IA ou usar materiais que você já tenha. Vamos conversar e definir a melhor abordagem para o seu projeto.</p>
                 </div>
             </div>
         </div>
@@ -1588,15 +1569,13 @@ O prazo pode mudar de acordo com o pacote escolhido .</p>
             </div>
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
-                <a href="#promocoes">Promoções</a>  
-
-                <a href="#exemplos">Exemplos</a>  
-
+                <a href="#promocoes">Promoções</a><br>
+                <a href="#exemplos">Exemplos</a><br>
                 <a href="#faq">F.A.Q</a>
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
-                <p><strong>WhatsApp:</strong> (98 ) 98480-3934</p>
+                <p><strong>WhatsApp:</strong> (98) 98480-3934</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1609,7 +1588,7 @@ O prazo pode mudar de acordo com o pacote escolhido .</p>
 
     <script>
         // Script para partículas animadas
-        function createParticles( ) {
+        function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particlesCount = 50;
 
@@ -1624,12 +1603,23 @@ O prazo pode mudar de acordo com o pacote escolhido .</p>
             }
         }
 
-        // Script para o carrossel
+        // Script para o carrossel - Melhorado
         let slideIndex = 1;
+        let autoSlideInterval;
         showSlide(slideIndex);
+        startAutoSlide();
 
         function currentSlide(n) {
+            stopAutoSlide();
             showSlide(slideIndex = n);
+            startAutoSlide();
+        }
+
+        function changeSlide(n) {
+            stopAutoSlide();
+            slideIndex += n;
+            showSlide(slideIndex);
+            startAutoSlide();
         }
 
         function showSlide(n) {
@@ -1646,11 +1636,51 @@ O prazo pode mudar de acordo com o pacote escolhido .</p>
             indicators[slideIndex - 1].classList.add('active');
         }
 
-        // Auto-advance carrossel
-        setInterval(() => {
-            slideIndex++;
-            showSlide(slideIndex);
-        }, 5000);
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                slideIndex++;
+                showSlide(slideIndex);
+            }, 3000); // Reduzido para 3 segundos
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Pausar auto-slide quando mouse estiver sobre o carrossel
+        const carousel = document.querySelector('.carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        // Suporte para touch/swipe no carrossel
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (carousel) {
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    changeSlide(1); // Swipe left - next slide
+                } else {
+                    changeSlide(-1); // Swipe right - previous slide
+                }
+            }
+        }
 
         // FAQ Toggle
         function toggleFaq(element) {
