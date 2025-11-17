@@ -647,6 +647,48 @@
             box-shadow: 0 12px 35px rgba(255, 0, 255, 0.5);
         }
 
+.combo-note {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.combo-note p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #a0a0ff;
+}
+
+.combo-note strong {
+    color: #00ffff;
+}
+
+.plan-economy {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.plan-economy.highlight {
+    font-size: 18px;
+    color: #ffdd00;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.feature-item {
+    padding: 10px 0;
+    font-size: 15px;
+}
         /* Carrossel de Prova Social - Melhorado */
         .carousel-section {
             padding: 60px 20px;
@@ -754,6 +796,160 @@
         }
 
         /* Depoimentos */
+.testimonials-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-title {
+    font-size: 42px;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #a0a0ff;
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #ff00ff, #00ffff) 1;
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0a0e27;
+    flex-shrink: 0;
+}
+
+.testimonial-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00ffff;
+    margin-bottom: 5px;
+}
+
+.testimonial-role {
+    font-size: 14px;
+    color: #a0a0ff;
+    margin-bottom: 5px;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #ff00ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.instagram-link:hover {
+    color: #00ffff;
+}
+
+.testimonial-stars {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c0c0ff;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(255, 0, 255, 0.2);
+    border: 1px solid #ff00ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00ffff;
+}
+
+.testimonials-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.testimonials-cta p {
+    font-size: 18px;
+    color: #a0a0ff;
+}
+
+.testimonials-cta strong {
+    color: #00ffff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-title {
+        font-size: 32px;
+    }
+}
         .testimonials-section {
             padding: 100px 20px;
             background: rgba(0, 0, 0, 0.2);
@@ -1152,7 +1348,7 @@
         <div class="hero-combined-container">
             <div class="hero-text">
                 <h1>Transforme sua presença digital com IA</h1>
-                <p>Te ajudo a VENDER QUALQUER COISA com o poder da inteligência artificial</p>
+                <p>Jingles + Vídeos + Artes com IA que VENDEM QUALQUER COISA! Não importa qual seu Produto ou Serviço!</p>
                 <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20com%20IA" class="hero-cta">🚀 Quero Vender Mais com IA</a>
             </div>
             <div class="hero-video">
@@ -1208,87 +1404,87 @@
     </section>
 
     <!-- Seção de Serviços -->
-    <section class="services-section">
-        <div class="services-container">
-            <h2 class="services-title">Serviços Personalizados com IA</h2>
-            <p class="services-subtitle">Criação sob medida para seu negócio - cada projeto é único e desenvolvido especialmente para você</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="images/icon_camera_ia.png" alt="Criação de Imagens">
-                    </div>
-                    <h3>Criação de Imagens com IA</h3>
-                    <p>Fotos profissionais que vendem. Criação ou edição com qualidade de estúdio sem precisar contratar influencers/modelos e fotógrafos caros.</p>
-                    
-                    <div class="price-box">
-                        <div class="price-item">
-                            <span>4 imagens</span>
-                            <span><span class="price-old">R$ 70</span> <span class="price-new">R$ 50</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>8 imagens</span>
-                            <span><span class="price-old">R$ 140</span> <span class="price-new">R$ 80</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>12 imagens</span>
-                            <span><span class="price-old">R$ 210</span> <span class="price-new">R$ 110</span></span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20imagens%20com%20IA" class="service-button">Criar Minhas Imagens</a>
+<section class="services-section">
+    <div class="services-container">
+        <h2 class="services-title">Serviços Profissionais com IA</h2>
+        <p class="services-subtitle">Cada projeto é único e desenvolvido especialmente para transformar sua presença digital</p>
+        
+        <div class="services-grid">
+            <!-- JINGLES -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="images/icon_music_ia.png" alt="Jingles Chicletes">
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="images/icon_palette_ia.png" alt="Artes Elaboradas">
+                <h3>🎵 Jingles Chicletes</h3>
+                <p>Grave sua marca na mente da cidade! Todo mundo vai cantar o lembrar do seu negócio.</p>
+                
+                <div class="price-box">
+                    <div class="price-item">
+                        <span>Básico (30-45s)</span>
+                        <span><span class="price-old">R$ 297</span> <span class="price-new">R$ 147</span></span>
                     </div>
-                    <h3>Artes Elaboradas</h3>
-                    <p>Posts para as Redes Sociais, flyers , banners... com pós-edição profissional que atrai e converte.</p>
-                    
-                    <div class="price-box">
-                        <div class="price-item">
-                            <span>4 artes</span>
-                            <span><span class="price-old">R$ 180</span> <span class="price-new">R$ 120</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>8 artes</span>
-                            <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 230</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>12 artes</span>
-                            <span><span class="price-old">R$ 480</span> <span class="price-new">R$ 300</span></span>
-                        </div>
+                    <div class="price-item">
+                        <span>Premium (45-60s)</span>
+                        <span><span class="price-old">R$ 397</span> <span class="price-new">R$ 247</span></span>
                     </div>
-                    
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20artes%20elaboradas" class="service-button">Transformar Redes Sociais</a>
                 </div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20meu%20jingle%20chiclete%20🎵" class="service-button">Quero Meu Jingle</a>
+            </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="images/icon_avatar_ia.png" alt="Avatares Exclusivos">
-                    </div>
-                    <h3>Avatares Exclusivos</h3>
-                    <p>Perfeito para usar em reels, posts ou até figurinhas! Tenha a sua própria 'Lu do Magalu' - uma porta-voz digital que trabalha 24h por você.</p>
-                    
-                    <div class="price-box">
-                        <div class="price-item">
-                            <span>4 cenas</span>
-                            <span><span class="price-old">R$ 120</span> <span class="price-new">R$ 80</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>8 cenas</span>
-                            <span><span class="price-old">R$ 240</span> <span class="price-new">R$ 140</span></span>
-                        </div>
-                        <div class="price-item">
-                            <span>12 cenas</span>
-                            <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 200</span></span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20meu%20avatar%20exclusivo" class="service-button">Criar Meu Avatar</a>
+            <!-- ARTES ELABORADAS -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="images/icon_palette_ia.png" alt="Artes Elaboradas">
                 </div>
+                <h3>🎨 Artes Elaboradas</h3>
+                <p>Posts, banners, flyers, panfletos e artes em geral com edição profissional que atrai e converte.</p>
+                
+                <div class="price-box">
+                    <div class="price-item">
+                        <span>4 artes</span>
+                        <span><span class="price-old">R$ 180</span> <span class="price-new">R$ 120</span></span>
+                    </div>
+                    <div class="price-item">
+                        <span>8 artes</span>
+                        <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 230</span></span>
+                    </div>
+                    <div class="price-item">
+                        <span>12 artes</span>
+                        <span><span class="price-old">R$ 480</span> <span class="price-new">R$ 300</span></span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20artes%20elaboradas%20🎨" class="service-button">Transformar Redes Sociais</a>
+            </div>
 
+            <!-- IMAGENS COM IA -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="images/icon_avatar_ia.png" alt="Imagens com IA">
+                </div>
+                <h3>📸 Imagens com IA</h3>
+                <p>Avatares virtuais, imagens de produtos para iFood/e-commerce. Qualidade profissional sem fotógrafo!</p>
+                
+                <div class="price-box">
+                    <div class="price-item">
+                        <span>4 imagens</span>
+                        <span><span class="price-old">R$ 120</span> <span class="price-new">R$ 80</span></span>
+                    </div>
+                    <div class="price-item">
+                        <span>8 imagens</span>
+                        <span><span class="price-old">R$ 240</span> <span class="price-new">R$ 140</span></span>
+                    </div>
+                    <div class="price-item">
+                        <span>12 imagens</span>
+                        <span><span class="price-old">R$ 360</span> <span class="price-new">R$ 200</span></span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20criar%20imagens%20com%20IA%20📸" class="service-button">Criar Minhas Imagens</a>
+            </div>
+        </div>
+    </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="images/icon_video_ia.png" alt="Vídeos Profissionais">
@@ -1330,74 +1526,85 @@
         </div>
     </section>
 
-    <!-- Planos Mensais -->
-    <section class="plans-section" id="plans">
-        <div class="plans-container">
-            <h2 class="plans-title">Planos Mensais Combo</h2>
-            <p class="plans-subtitle">Combos especiais com desconto para quem quer resultados constantes</p>
-            
-            <div class="plans-grid">
-                <div class="plan-card">
-                    <div class="plan-impact">💪 Para quem está começando</div>
-                    <h3>Plano Basic</h3>
-                    <div class="plan-price">
-                        <span class="price-old">R$ 470</span>
-                        <span class="price-new">R$ 380</span>
-                        <span class="price-period">/mês</span>
-                    </div>
-                    
-                    <div class="plan-features">
-                        <div class="feature-item">✅ 4 imagens</div>
-                        <div class="feature-item">✅ 4 artes</div>
-                        <div class="feature-item">✅ 4 cenas de avatar</div>
-                        <div class="feature-item">✅ 1 vídeo rápido</div>
-                    </div>
-                    
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Basic" class="plan-button">Quero Este Plano</a>
+    </section>
+<!-- Combos Especiais -->
+<section class="plans-section" id="plans">
+    <div class="plans-container">
+        <h2 class="plans-title">🔥 Combos que Transformam seu Instagram</h2>
+        <p class="plans-subtitle">Upgrade completo: Jingle + Vídeo + Feed profissional com economia real!</p>
+        
+        <div class="plans-grid">
+            <!-- COMBO ESSENCIAL -->
+            <div class="plan-card">
+                <div class="plan-impact">✨ Perfeito para começar!</div>
+                <h3>Combo Essencial</h3>
+                <div class="plan-price">
+                    <span class="price-old">R$ 407</span>
+                    <span class="price-new">R$ 347</span>
                 </div>
-
-                <div class="plan-card">
-                    <div class="plan-impact">🚀 Acelere suas vendas</div>
-                    <h3>Plano Prime</h3>
-                    <div class="plan-price">
-                        <span class="price-old">R$ 940</span>
-                        <span class="price-new">R$ 570</span>
-                        <span class="price-period">/mês</span>
-                    </div>
-                    
-                    <div class="plan-features">
-                        <div class="feature-item">✅ 8 imagens</div>
-                        <div class="feature-item">✅ 8 artes</div>
-                        <div class="feature-item">✅ 8 cenas de avatar</div>
-                        <div class="feature-item">✅ 1 vídeo curto (ou 2 rápidos)</div>
-                    </div>          
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Prime" class="plan-button">Quero Este Plano</a>
+                
+                <div class="plan-features">
+                    <div class="feature-item">🎵 Jingle Básico (30-45s)</div>
+                    <div class="feature-item">🎬 Vídeo Curto (~16s)</div>
+                    <div class="feature-item">🎨 6 Artes Elaboradas</div>
+                    <div class="feature-item">💡 2 linhas do feed</div>
                 </div>
-
-                <div class="plan-card featured">
-                    <div class="plan-badge">MELHOR CUSTO BENEFÍCIO!</div>
-                    <div class="plan-impact">💎 Domine o mercado</div>
-                    <h3>Plano Premium</h3>
-                    <div class="plan-price">
-                        <span class="price-old">R$ 1.450</span>
-                        <span class="price-new">R$ 800</span>
-                        <span class="price-period">/mês</span>
-                    </div>
-                    
-                    <div class="plan-features">
-                        <div class="feature-item">✅ 12 imagens</div>
-                        <div class="feature-item">✅ 12 artes</div>
-                        <div class="feature-item">✅ 12 cenas de avatar</div>
-                        <div class="feature-item">✅ 1 vídeo Plus (ou 4 rápidos)</div>
-                    </div>
-                    
-                    <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20contratar%20o%20Plano%20Premium" class="plan-button">Quero Este Plano</a>
-                </div>
+                
+                <div class="plan-economy">Economize R$ 60</div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20o%20Combo%20Essencial%20✨" class="plan-button">Quero Este Combo</a>
             </div>
+
+            <!-- COMBO VIRAL - DESTAQUE -->
+            <div class="plan-card featured">
+                <div class="plan-badge">⭐ MAIS ESCOLHIDO!</div>
+                <div class="plan-impact">🔥 Melhor Custo-Benefício!</div>
+                <h3>Combo Viral</h3>
+                <div class="plan-price">
+                    <span class="price-old">R$ 717</span>
+                    <span class="price-new">R$ 547</span>
+                </div>
+                
+                <div class="plan-features">
+                    <div class="feature-item">🎵 Jingle Premium (45-60s)</div>
+                    <div class="feature-item">🎬 Vídeo Plus (~32s)</div>
+                    <div class="feature-item">🎨 9 Artes Elaboradas</div>
+                    <div class="feature-item">💎 Feed completo 3x3 </div>
+                </div>
+                
+                <div class="plan-economy highlight">Economize R$ 170 🔥</div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20o%20Combo%20Viral%20⭐" class="plan-button">Quero Viralizar!</a>
+            </div>
+
+            <!-- COMBO DOMÍNIO -->
+            <div class="plan-card">
+                <div class="plan-impact">🚀 Resultados máximos!</div>
+                <h3>Combo Domínio</h3>
+                <div class="plan-price">
+                    <span class="price-old">R$ 967</span>
+                    <span class="price-new">R$ 747</span>
+                </div>
+                
+                <div class="plan-features">
+                    <div class="feature-item">🎵 Jingle Premium (45-60s)</div>
+                    <div class="feature-item">🎬 Vídeo Premium (~56s)</div>
+                    <div class="feature-item">🎨 12 Artes Elaboradas</div>
+                    <div class="feature-item">👑 Feed Profissional + Versão Stories de Bônus </div>
+                </div>
+                
+                <div class="plan-economy">Economize R$ 220</div>
+                
+                <a href="https://wa.me/+5598984803934?text=Olá!%20Quero%20o%20Combo%20Domínio%20🚀" class="plan-button">Quero Dominar!</a>
             </div>
         </div>
-    </section>
 
+        <div class="combo-note">
+            <p>💡 <strong>Quer adicionar imagens de avatar ou produtos?</strong> É só pedir no WhatsApp!</p>
+            <p>🎯 Todos os combos incluem revisões gratuitas e entrega rápida!</p>
+        </div>
+    </div>
+</section>
     <!-- Carrossel de Prova Social -->
     <section class="carousel-section" id="exemplos">
         <div class="carousel-container">
@@ -1445,56 +1652,97 @@
         </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section class="testimonials-section">
-        <div class="testimonials-container">
-            <h2 class="testimonials-title">O que nossos clientes dizem</h2>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <img src="images/avatar_maria.jpeg" alt="Carla Mendes">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Carla Mendes</h4>
-                            <p>Corretora de Imóveis</p>
-                        </div>
+<!-- Seção de Depoimentos -->
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <h2 class="testimonials-title">Clientes reais, resultados reais! Veja quem já transformou o negócio com a IA</h2>
+        <p class="testimonials-subtitle">Seu negócio pode ser o próximo!</p>
+        
+        <div class="testimonials-grid">
+            <!-- DEPOIMENTO 1 - NOELIA -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+    <img src="imagens/china.png" alt="Foto de Noelia">
+                        <span>N</span>
                     </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Fique chocada, não acreditei quando vi o resultado! Minhas fotos ficaram incríveis e agora consigo vender muito mais. Os clientes ficam impressionados com a qualidade das imagens dos imóveis."</p>
+                    <div class="testimonial-info">
+                        <h4>Noelia</h4>
+                        <p class="testimonial-role">Restaurante China Best Food</p>
+                        <a href="https://www.instagram.com/chinabestfood/" target="_blank" class="instagram-link">
+                            📱 @chinabestfood
+                        </a>
+                    </div>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <img src="images/avatar-joao.jpg" alt="João Ferreira">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>João Ferreira</h4>
-                            <p>Empreendedor</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Rapaz, que diferença! Antes eu gastava uma fortuna com fotógrafo e ainda demorava semanas. Agora tenho conteúdo profissional rapidinho e por um preço que cabe no bolso. Recomendo demais!"</p>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Dessa vez você se superou! Nosso hit musical ficou incrível, amamos!!! As artes do Instagram ficaram perfeitas e as fotos pro iFood mudaram tudo - os pedidos aumentaram muito depois que trocamos as imagens. Tô apaixonada com o resultado!"
+                </p>
+                <div class="testimonial-tags">
+                    <span class="tag">🎵 Jingle</span>
+                    <span class="tag">📸 Imagens e Artes</span>
+                    <span class="tag">📋 Cardápio</span>
                 </div>
+            </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <img src="images/avatar-ana.jpg" alt="Ana Beatriz">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Ana Beatriz</h4>
-                            <p>Lojista</p>
-                        </div>
+            <!-- DEPOIMENTO 2 - CARLOS -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+    <img src="imagens/luiza.png" alt="Foto de luiza">
+                        <span>C</span>
                     </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Gente, que trabalho incrível! Meu Instagram explodiu depois que comecei a usar as artes com meu avatar. Agora consigo ter vídeos sem nem precisar me maquiar nem nada kkk. As clientes adoram e sempre perguntam onde faço. Super indico!"</p>
+                    <div class="testimonial-info">
+                        <h4>Carlos</h4>
+                        <p class="testimonial-role">Lanches Luiza</p>
+                        <a href="https://www.instagram.com/lanchesluiza/" target="_blank" class="instagram-link">
+                            📱 @lanchesluiza
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Te agradeço demais pelas imagens das pizzas e lanches, eu nunca tenho tempo pra tirar e jamais ficariam tão bonitas como as que você faz, achei o cardápio top tb viu, era exatamente o que eu tava precisando. o jingle deu uma vida aqui pra lanchonete, tá sempre tocando eu coloquei pra até divulgar no carro de som, foi sucesso! "
+                </p>
+                <div class="testimonial-tags">
+                    <span class="tag">🎵 Jingle</span>
+                    <span class="tag">📸 Imagens e Artes</span>
+                    <span class="tag">📋 Cardápio</span>
+                </div>
+            </div>
+
+            <!-- DEPOIMENTO 3 - PAULO -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+    <img src="imagens/parati.png" alt="Foto de parati">
+                        <span>P</span>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Paulo</h4>
+                        <p class="testimonial-role">Lotérica Parati</p>
+                        <a href="https://www.instagram.com/lotericaparaticg/" target="_blank" class="instagram-link">
+                            📱 @lotericaparaticg
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Ficou excelente nossa música, você tá ficando muito boa hein, parabéns! A galera curtiu demais o videoclipe lá da avatar influencer no instagram, pode continuar assim que eu tô gostando."
+                </p>
+                <div class="testimonial-tags">
+                    <span class="tag">🎵 Jingle</span>
+                    <span class="tag">🎬 Videoclipe</span>
+                    <span class="tag">🤖 Artes e Avatar</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="testimonials-cta">
+            <p>💬 Quer ter resultados como esses? <strong>Chama no WhatsApp!</strong></p>
+        </div>
+    </div>
+</section>
 
     <!-- FAQ -->
     <section class="faq-section" id="faq">
@@ -1546,6 +1794,46 @@ O prazo pode mudar de acordo com o pacote escolhido.</p>
                     <p>Depende do serviço. Para avatares, sim (se desejar que seja parecido com você ou com alguém). Para outros serviços, podemos criar tudo do zero com IA ou usar materiais que você já tenha. Vamos conversar e definir a melhor abordagem para o seu projeto.</p>
                 </div>
             </div>
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>🎵 Quanto tempo leva para criar um jingle?</h3>
+        <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+        <p>Jingles ficam prontos em <strong>24 a 48 horas</strong>! Você passa as informações do negócio, criamos a música e você aprova. Rápido e sem enrolação!</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>🎸 Posso escolher o estilo musical do jingle?</h3>
+        <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+        <p><strong>Claro!</strong> Você escolhe: forró, pop, funk, sertanejo, rock... Criamos no estilo que combina com a identidade da sua marca!Só não pode escolher pra ficar idêntico uma música que já existe, por questões de direitos autorais</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>😟 E se eu não gostar do jingle?</h3>
+        <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+        <p><strong>Zero risco!</strong> Você só paga depois de aprovar. Incluímos <strong>1 revisão grátis</strong> (Premium tem revisões ilimitadas). Seu jingle fica do jeito que você quer!</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        <h3>📻 Posso usar o jingle em rádio e propaganda?</h3>
+        <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+        <p><strong>SIM!</strong> O jingle é 100% seu. Use onde quiser: rádio, redes sociais, loja física, WhatsApp, anúncios... Sem limitações!</p>
+    </div>
+</div>
+
         </div>
     </section>
 
